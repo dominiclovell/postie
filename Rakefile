@@ -78,7 +78,7 @@ namespace :db do
     
     DataMapper.auto_migrate!
     
-    url = 'http://www1.auspost.com.au/download/pc-full.zip'
+    url = 'http://www.auspost.com.au/download/pc-full.zip'
     zip_file = File.join(File.dirname(__FILE__), 'db', 'pc-full.zip')
     chdir File.join(File.dirname(__FILE__), 'db') do
       open url do |source|
