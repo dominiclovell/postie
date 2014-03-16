@@ -8,7 +8,7 @@ require 'json'
 module Postie
   class Application < Sinatra::Base
     configure do
-      set :public, File.join(File.dirname(__FILE__), '..', 'public')
+      set :public_folder, File.join(File.dirname(__FILE__), '..', 'public')
       DataMapper::Logger.new(STDOUT, :debug) 
       DataMapper.setup(:postie, "sqlite3://#{File.expand_path(File.join(File.dirname(__FILE__), '..', 'db', 'postcodes.db'))}")
     end
